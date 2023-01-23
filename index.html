@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Excel automation by Gadi Lehmann</title>
+    
+    <link type="text/css" rel="stylesheet" href="materialize.min.css">
+    <!-- use xlsx.full.min.js from version 0.19.1 -->
+<script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.19.1/package/dist/xlsx.full.min.js"></script>
+<!-- FOR CREATING EXCEL  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--  -->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container center-align">
+    <h1>Vlookup on HR tables  </h1>
+    <div class="row center-align">
+      
+      <input  type="file" id="demo1" accept=".xls,.xlsx" style="display: none;"/>
+      <input  type="file" id="demo2" accept=".xls,.xlsx" style="display: none;"/>
+
+      
+      
+        <div class="file-field input-field center-align"> <!-- First file upload -->
+          <div class="col s6  center-align">
+          <div class="btn center-align" style="float:none;" onclick="document.getElementById('demo1').click()"> 
+            <span>File 1</span>
+
+            </div>
+          </div>
+          <div class="col s6 center-align"> <!-- Second file upload -->
+          <div class="btn center-align" style="float:none;" onclick="document.getElementById('demo2').click()">
+            <span>File 2</span>
+
+            </div>
+          </div>
+         
+        </div>
+     
+
+      
+      
+    </div>
+<div class="row">
+  <button id="button-a" type="button" class="btn btn-primary" onclick="createExcel()">download Excel file with matching ids</button>
+</div>
+  
+    
+  </div>
+  <footer class="bg-primary text-center text-lg-start fixed-bottom" style="position: absolute; bottom: 20px; left: 50px;">All Rights Reserved &#169 Gidon Lehmann 2023 </footer>
+  </body>
+  <script src="script.js"></script>
+  <script type="text/javascript" src="materialize.min.js"></script>
+</html>
